@@ -13,7 +13,7 @@ return  Padding(
   child:  Column(
     children: [
       
-         Container(child: CustomAppBar()),
+         Container(child: CustomAppBar(title: 'Note',icon: Icons.search,)),
         SizedBox(height: 5),
         // NoteItem(),
   Expanded(child: NotesListView()),
