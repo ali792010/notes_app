@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
-class NoteItem extends StatelessWidget { 
+class NoteItem extends StatelessWidget {
+  const NoteItem({super.key});
+ 
    @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Color(0xffFCCA75),
+        color: const Color(0xffFCCA75),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Padding(
@@ -14,9 +16,9 @@ class NoteItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              title: Text('Flutter tips',style: TextStyle(color: Colors.black),),
+              title: const Text('Flutter tips',style: TextStyle(color: Colors.black),),
               subtitle: Text('Built your career with new Note kkhkjk kjkjkj kjkjkjk kjkj kjkj',style: TextStyle(color: Colors.black.withOpacity(0.5)),),
-              trailing: IconButton(onPressed: (){}, icon: Icon(Icons.delete,color: Colors.black,)),
+              trailing: IconButton(onPressed: (){}, icon:const Icon(Icons.delete,color: Colors.black,)),
             ),
              Padding(
                padding: const EdgeInsets.symmetric(horizontal: 35,vertical: 10),
