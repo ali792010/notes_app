@@ -12,12 +12,11 @@ return  Padding(
   padding:  EdgeInsets.symmetric(horizontal: 24),
   child:  Column(
     children: [
-        SizedBox(height: 10),
+      
          Container(child: CustomAppBar()),
         SizedBox(height: 5),
         // NoteItem(),
-  Container(height: 1000,
-    child: NotesListView()),
+  Expanded(child: NotesListView()),
      
     ],
   ),
