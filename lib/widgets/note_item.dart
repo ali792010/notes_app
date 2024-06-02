@@ -9,15 +9,16 @@ class NoteItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context)
-        {
-          return EditNoteView();
-        }
-        ));
+        Navigator.of(context).push(MaterialPageRoute(builder:(context){ return EditNoteView();} ));
+        // Navigator.push.(context, MaterialPageRoute(builder: (context)
+        // {
+        //   return EditNoteView();
+        // }
+        // ));
       },
       child: Container(
         decoration: BoxDecoration(
-          color:  Color(no.color),
+          color:  Color(0xffff85855),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Padding(
@@ -28,7 +29,7 @@ class NoteItem extends StatelessWidget {
               ListTile(
                 title:  Text(no.title,style: TextStyle(color: Colors.black),),
                 subtitle: Text(no.subTitle,style: TextStyle(color: Colors.black.withOpacity(0.5)),),
-                trailing: IconButton(onPressed: (){}, icon:const Icon(Icons.delete,color: Colors.black,)),
+                trailing: IconButton(onPressed: (){ no.delete();}, icon:const Icon(Icons.delete,color: Colors.black,)),
               ),
                Padding(
                  padding: const EdgeInsets.symmetric(horizontal: 35,vertical: 10),
