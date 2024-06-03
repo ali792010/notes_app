@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/widgets/custom_icon.dart';
 
 class CustomAppBar extends StatelessWidget {
-  CustomAppBar({super.key,required this.title,required this.icon});
-
+  CustomAppBar({super.key,required this.title,required this.icon,this.ontap});
+void Function()? ontap;
   String title;
   IconData icon;
     @override
@@ -13,7 +13,9 @@ class CustomAppBar extends StatelessWidget {
         children: [
             Text('$title',style: TextStyle(fontSize: 32,fontFamily: 'Pacifico'),),
         Spacer(),
-        CustomSearchIcon(icon: icon),
+        GestureDetector(
+          onTap: ontap,
+          child: CustomSearchIcon( icon: icon)),
         ],
       ),
     );

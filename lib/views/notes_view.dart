@@ -9,9 +9,7 @@ class NotesView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => NotesCubit(),
-      child: Scaffold(
+    return  Scaffold(
         floatingActionButton: FloatingActionButton(
           shape: const CircleBorder(side: BorderSide()),
           backgroundColor: Color(0xff55EDDA),
@@ -31,7 +29,7 @@ class NotesView extends StatelessWidget {
           ),
         ),
         body: NotesViewBody(),
-      ),
+      
     );
   }
 }
